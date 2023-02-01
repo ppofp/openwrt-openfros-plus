@@ -22,6 +22,8 @@
 #sed -i 's/192.168.1.1/192.168.1.252/g' openwrt/package/base-files/files/bin/config_generate
 
 #2. Custom settings
+sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.//g' openwrt/package/lean/default-settings/files/zzz-default-settings
+
 sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 
