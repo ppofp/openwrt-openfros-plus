@@ -23,3 +23,6 @@
 #原理是把软件包源码放到 package 目录下，编译时会自动遍历，与本地编译是一样的。当然方法不止一种，其它方式请自行探索。
 
 git clone https://github.com/kenzok8/small-package package/small-package
+
+#删除原openfros seeds.conf.default中对库的版本限制
+sed -i 's/\^[a-z0-9]*//g' feeds.conf.default
