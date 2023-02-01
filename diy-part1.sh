@@ -19,11 +19,12 @@
 
 
 #1. Modify default IP
-#sed -i 's/192.168.1.1/192.168.1.252/g' openwrt/package/base-files/files/bin/config_generate
+#sed -i 's/192.168.1.1/192.168.66.1/g' openwrt/package/base-files/files/bin/config_generate
 
-#2. Custom settings
+#2. 修改密码
 sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.//g' openwrt/package/lean/default-settings/files/zzz-default-settings
 
-sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
-sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
+#3.可以修改feeds,但最好放在 diy2中去，用clone目录的方式
+#sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+#sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 
