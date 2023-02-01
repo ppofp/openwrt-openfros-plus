@@ -12,3 +12,14 @@
 
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+
+
+
+#在 DIY 脚本中加入对指定软件包源码的远程仓库的克隆指令。就像下面这样：
+#git clone https://github.com/P3TERX/xxx package/xxx
+#本地make menuconfig生成.config文件时添加相应的软件包，如果你知道包名可以直接写到.config文件中。
+#TIPS: 如果额外添加的软件包与 Open­Wrt 源码中已有的软件包同名的情况，则需要把 Open­Wrt 源码中的同名软件包删除，否则会优先编译 Open­Wrt 中的软件包。
+#这同样可以利用到的 DIY 脚本，相关指令应写在diy-part2.sh。
+#原理是把软件包源码放到 package 目录下，编译时会自动遍历，与本地编译是一样的。当然方法不止一种，其它方式请自行探索。
+
+git clone https://github.com/kenzok8/small-package package/small-package
