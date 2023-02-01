@@ -26,3 +26,5 @@ git clone https://github.com/kenzok8/small-package package/small-package
 
 #删除原openfros seeds.conf.default中对库的版本限制
 sed -i 's/\^[a-z0-9]*//g' feeds.conf.default
+#删除密码
+sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.//g' package/lean/default-settings/files/zzz-default-settings
